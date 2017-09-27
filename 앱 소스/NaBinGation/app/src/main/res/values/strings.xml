@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">trash</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--구에 대한 스피너 배열 생성-->
+    <string name="gu_name_01">강남구</string>
+    <string name="gu_name_02">강동구</string>
+    <string name="gu_name_03">강북구</string>
+    <string name="gu_name_04">강서구</string>
+    <string name="gu_name_05">관악구</string>
+    <string name="gu_name_06">광진구</string>
+    <string name="gu_name_07">구로구</string>
+    <string name="gu_name_08">금천구</string>
+    <string name="gu_name_09">노원구</string>
+    <string name="gu_name_10">도봉구</string>
+    <string name="gu_name_11">동대문구</string>
+    <string name="gu_name_12">동작구</string>
+    <string name="gu_name_13">마포구</string>
+    <string name="gu_name_14">서대문구</string>
+    <string name="gu_name_15">서초구</string>
+    <string name="gu_name_16">성동구</string>
+    <string name="gu_name_17">성북구</string>
+    <string name="gu_name_18">송파구</string>
+    <string name="gu_name_19">양천구</string>
+    <string name="gu_name_20">영등포구</string>
+    <string name="gu_name_21">용산구</string>
+    <string name="gu_name_22">은평구</string>
+    <string name="gu_name_23">종로구</string>
+    <string name="gu_name_24">중구</string>
+    <string name="gu_name_25">중랑구</string>
+</resources>

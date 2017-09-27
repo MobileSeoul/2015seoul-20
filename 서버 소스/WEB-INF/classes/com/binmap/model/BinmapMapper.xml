@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Binmap">
+	<select id="selectAll" resultType="Binmap" parameterType="Binmap">
+		<![CDATA[
+		SELECT A . *
+		FROM binmap A, (
+
+		SELECT * , ( 6371 * ACOS( COS( RADIANS( #{latitude} ) ) * COS( RADIANS(
+		latitude ) ) * COS( RADIANS( longitude ) - RADIANS( #{longitude} ) ) +
+		SIN( RADIANS( #{latitude}) ) * SIN( RADIANS( latitude ) ) ) ) AS
+		distance
+		FROM binmap
+		HAVING distance <= 0.3
+		ORDER BY distance
+		LIMIT 0 , 1000
+		)B
+		WHERE A.bin_id = B.bin_id
+		]]>
+	</select>
+
+	<update id="update" parameterType="Binmap">
+		update binmap set status=#{status} where bin_id=#{bin_id}
+	</update>
+</mapper>
